@@ -25,6 +25,7 @@ def fetch_bot_token():
     s3_token.download_file('rhelbot-discord', "rhelbot_token.txt", "rhelbot_token.txt")
 
 
+# Pulling the list of onboarded server_bots and returning the welcome message to be DM'd to a new user
 def fetch_server_welcome(server_id):
     try:
         ddb_response = whitelist_table.get_item(
@@ -39,16 +40,3 @@ def fetch_server_welcome(server_id):
     else:
         server_entry = ddb_response['Item']
         return str(server_entry['welcome_message'])
-
-
-# Helper class to convert a DynamoDB item to JSON.
-class DecimalEncoder(json.JSONEncoder):
-    def default(self, o):
-        if isinstance(o, decimal.Decimal):
-            if o % 1 > 0:
-                return float(o)
-            else:
-                return int(o)
-        return super(DecimalEncoder, self).default(o)
-
-

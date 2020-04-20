@@ -1,6 +1,6 @@
 # bot.py
 import discord
-from bot import aws_resources as aws
+import aws_resources as aws
 from discord.ext import commands
 
 # Connecting to Discord
@@ -11,7 +11,7 @@ rhelbot = commands.Bot(command_prefix='!rhel ')
 
 # Bot startup information
 @rhelbot.event
-async def on_ready(self):
+async def on_ready():
     print(f'Connected to Discord!\n\n')
     print(f'{rhelbot.user} is connected to the following Discord servers:\n')
     for guild in rhelbot.guilds:
@@ -22,12 +22,12 @@ async def on_ready(self):
 @rhelbot.event
 async def on_member_join(member):
     welcome_message = aws.fetch_server_welcome(member.guild.id)
-    if welcome_message == 'Error':
+    if welcome_message == ('Error' or ''):
         return
     else:
         await member.create_dm()
         await member.dm_channel.send(
-            f'Hi {member.name}, welcome to {member.guild.name}!\n\n'
+            f'Hi {member.name}, welcome to the {member.guild.name} Discord server!\n\n'
             f'{welcome_message}'
         )
         return
