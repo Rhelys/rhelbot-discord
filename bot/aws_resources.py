@@ -34,9 +34,11 @@ def fetch_server_welcome(server_id):
         )
     except ClientError as e:
         print(e.response['Error']['Message'])
-        return 'This server has not been onboarded to the bot config yet'
+        print(f'This server has not been onboarded to the bot config yet')
+        return 'Error'
     else:
         server_entry = ddb_response['Item']
+        return str(server_entry['welcome_message'])
 
 
 # Helper class to convert a DynamoDB item to JSON.

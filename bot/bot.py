@@ -1,6 +1,6 @@
 # bot.py
 import discord
-from bot.bot import aws_resources as aws
+from bot import aws_resources as aws
 from discord.ext import commands
 
 # Connecting to Discord
@@ -22,11 +22,15 @@ async def on_ready(self):
 @rhelbot.event
 async def on_member_join(member):
     welcome_message = aws.fetch_server_welcome(member.guild.id)
-    await member.create_dm()
-    await member.dm_channel.send(
-        f'Hi {member.name}, welcome to {member.guild.name}!\n\n'
-        f'{welcome_message}'
-    )
+    if welcome_message == 'Error':
+        return
+    else:
+        await member.create_dm()
+        await member.dm_channel.send(
+            f'Hi {member.name}, welcome to {member.guild.name}!\n\n'
+            f'{welcome_message}'
+        )
+        return
 
 
 # Starting the bot up
