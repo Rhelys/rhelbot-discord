@@ -9,7 +9,7 @@ from boto3.dynamodb.conditions import Key, Attr
 from botocore.exceptions import ClientError
 
 
-dynamodb = boto3.resource("dynamodb", region_name='us-west-2', endpoint_url="http://localhost:8000")
+dynamodb = boto3.resource("dynamodb", region_name='us-west-2', endpoint_url='https://dynamodb.us-west-2.amazonaws.com')
 whitelist_table = dynamodb.Table('rhelbot-discord')
 
 
@@ -39,4 +39,5 @@ def fetch_server_welcome(server_id):
         return 'Error'
     else:
         server_entry = ddb_response['Item']
+        print(f'Welcome message retrieved for {server_id} successfully')
         return str(server_entry['welcome_message'])
