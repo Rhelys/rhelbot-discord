@@ -10,7 +10,7 @@ from botocore.exceptions import ClientError
 
 
 dynamodb = boto3.resource("dynamodb", region_name='us-west-2', endpoint_url='https://dynamodb.us-west-2.amazonaws.com')
-whitelist_table = dynamodb.Table('rhelbot-discord')
+server_table = dynamodb.Table('rhelbot-discord')
 
 
 def fetch_bot_token():
@@ -28,7 +28,7 @@ def fetch_bot_token():
 # Pulling the list of onboarded server_bots and returning the welcome message to be DM'd to a new user
 def fetch_server_welcome(server_id):
     try:
-        ddb_response = whitelist_table.get_item(
+        ddb_response = server_table.get_item(
             Key={
                 'server_id': server_id
             }

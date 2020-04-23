@@ -2,12 +2,26 @@
 # Generic version of the bot for other servers
 import discord
 from discord.ext import commands
-import aws_resources as aws
+from aws_resources import fetch_server_welcome, fetch_bot_token
 
 # Connecting to Discord
 discord_client = discord.Client()
 
+# Setting up the Cog imports
+# Prod cogs
+initial_extensions = ['cogs.admin']
+
+
+# Setting the command handler
 rhelbot = commands.Bot(command_prefix='!rhel ')
+
+# Loading the Cogs into the bot
+for extension in initial_extensions:
+    try:
+        rhelbot.load_extension(extension)
+        print(f'Successfully loaded Cog {extension}')
+    except commands.ExtensionError as e:
+        print(f'Failed to load Cog {extension} with error {e}')
 
 
 # Bot startup information
@@ -22,7 +36,7 @@ async def on_ready():
 # Per-server welcome messages
 @rhelbot.event
 async def on_member_join(member):
-    welcome_message = aws.fetch_server_welcome(member.guild.id)
+    welcome_message = fetch_server_welcome(member.guild.id)
     if welcome_message == ('Error' or ''):
         return
     else:
@@ -35,7 +49,7 @@ async def on_member_join(member):
 
 
 # Starting the bot up
-aws.fetch_bot_token()
+fetch_bot_token()
 bot_token_file = open("rhelbot_token.txt", "r")
 bot_token = bot_token_file.read()
-rhelbot.run(bot_token)
+rhelbot.run(bot_token, bot=True, reconnect=True)
