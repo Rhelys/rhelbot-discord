@@ -5,12 +5,12 @@ import discord
 from discord.ext import commands
 
 
-class AdminCog(commands.Cog):
+class AdminCog(commands.Cog, name="Admin Commands"):
     def __init__(self, rhelbot):
         self.bot = rhelbot
         self._last_member = None
 
-    @commands.command(name='create-channel')
+    @commands.command(name='create-channel', help='Creates a text channel with the specified name')
     @commands.has_permissions(manage_channels=True)
     async def create_channel(self, ctx, channel_name):
         server = ctx.guild

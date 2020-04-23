@@ -12,8 +12,32 @@ discord_client = discord.Client()
 initial_extensions = ['cogs.admin']
 
 
+# Setting multiple help prefixes
+def get_help_prefix(message):
+    prefixes = ['help', '?', 'wut']
+
+    # Only allow for 'help' in DMs
+    if not message.guild:
+        return 'help'
+
+    return
+
+
+# Also setting custom ways to interact with the bot
+def get_command_prefix(bot, message):
+    prefixes = ['!rhel ']
+
+    # Only allow for the default in DMs
+    if not message.guild:
+        return '!rhel '
+
+    # Allow the bot to also respond to mentions as if it's a prefix
+    return commands.when_mentioned_or(*prefixes)(bot, message)
+
+
 # Setting the command handler
-rhelbot = commands.Bot(command_prefix='!rhel ')
+rhelbot = commands.Bot(command_prefix=get_command_prefix, default_help_command=get_help_prefix,
+                       description='Rhelbot - the bot for Rhelys to do stuff')
 
 # Loading the Cogs into the bot
 for extension in initial_extensions:
