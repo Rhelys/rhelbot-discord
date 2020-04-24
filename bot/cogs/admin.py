@@ -16,7 +16,7 @@ class AdminCog(commands.Cog, name="Admin Commands"):
         server = ctx.guild
         existing_channel = discord.utils.get(server.channels, name=channel_name)
         if not existing_channel:
-            print(f'Creating a new channel in {server.name} called {channel_name}')
+            await ctx.send(f'Text channel #{channel_name} created!')
             await server.create_text_channel(channel_name)
 
 

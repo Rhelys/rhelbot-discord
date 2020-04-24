@@ -1,8 +1,16 @@
 # bot.py
 # Generic version of the bot for other servers
+import logging
 import discord
 from discord.ext import commands
 from aws_resources import fetch_server_welcome, fetch_bot_token
+
+# Setting up logs
+rhelbot_logs = logging.getLogger('discord')
+rhelbot_logs.setLevel(logging.INFO)
+handler = logging.FileHandler(filename='rhelbot.log', encoding='utf-8', mode='w')
+handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(message)s'))
+rhelbot_logs.addHandler(handler)
 
 # Connecting to Discord
 discord_client = discord.Client()
@@ -13,14 +21,13 @@ initial_extensions = ['cogs.admin']
 
 
 # Setting multiple help prefixes
-def get_help_prefix(message):
+def get_help_prefix(bot, message):
     prefixes = ['help', '?', 'wut']
 
     # Only allow for 'help' in DMs
     if not message.guild:
         return 'help'
-
-    return
+    return commands.when_mentioned_or(*prefixes)(bot, message)
 
 
 # Also setting custom ways to interact with the bot
