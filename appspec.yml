@@ -1,0 +1,9 @@
+version: 0.0
+os: linux
+files:
+  - source: source/bot
+    destination: /rhelbot/
+hooks:
+  ApplicationStart:
+    - location: /rhelbot/bot.py
+      timeout: 180

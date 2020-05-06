@@ -3,11 +3,12 @@
 import logging
 import discord
 from discord.ext import commands
-from aws_resources import fetch_server_welcome, fetch_bot_token
+from bot_functions.aws_resources import fetch_server_welcome, fetch_bot_token, fetch_server_reactions
+# from bot_functions.reactions import reaction_add, reaction_remove
 
 # Setting up logs
 rhelbot_logs = logging.getLogger('discord')
-rhelbot_logs.setLevel(logging.INFO)
+rhelbot_logs.setLevel(logging.WARN)
 handler = logging.FileHandler(filename='rhelbot.log', encoding='utf-8', mode='w')
 handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(message)s'))
 rhelbot_logs.addHandler(handler)
@@ -15,8 +16,7 @@ rhelbot_logs.addHandler(handler)
 # Connecting to Discord
 discord_client = discord.Client()
 
-# Setting up the Cog imports
-# Prod cogs
+# Setting up the Cog imports - Prod only in this list
 initial_extensions = ['cogs.admin']
 
 
@@ -77,7 +77,6 @@ async def on_member_join(member):
             f'{welcome_message}'
         )
         return
-
 
 # Starting the bot up
 fetch_bot_token()
