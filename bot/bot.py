@@ -17,7 +17,7 @@ rhelbot_logs.addHandler(handler)
 discord_client = discord.Client()
 
 # Setting up the Cog imports - Prod only in this list
-initial_extensions = ['cogs.admin']
+initial_extensions = ['cogs.admin', 'cogs.fflogs']
 
 
 # Setting multiple help prefixes

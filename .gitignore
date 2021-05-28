@@ -1,2 +1,3 @@
 *.txt
 *.log
+bot/bot_functions/__pycache__/graphQL_queries.cpython-37.pyc

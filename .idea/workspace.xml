@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="717feb34-9d12-424f-a138-38798d3bc445" name="Default Changelist" comment="Adding INFO level logging config">
+      <change afterPath="$PROJECT_DIR$/bot/bot_functions/reactions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/cogs/fflogs.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/unit_tests/test_admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Rhelys.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Rhelys.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/bot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/server_bots/kumo.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/bot_functions/graphQL_queries.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Unit Test" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1amHmzUDWbqEgHi2572m70N4koK" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Rhelys\Documents\GitHub\rhelbot-discord\bot\cogs" />
+      <recent name="C:\Users\Rhelys\Documents\GitHub\rhelbot-discord\bot\bot_functions" />
+      <recent name="C:\Users\Rhelys\Documents\GitHub\rhelbot-discord\bot" />
+      <recent name="C:\Users\Rhelys\Documents\GitHub\rhelbot-discord" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="717feb34-9d12-424f-a138-38798d3bc445" name="Default Changelist" comment="" />
+      <created>1587334011140</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587334011140</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Basic bot functionality">
+      <created>1587361405145</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1587361405145</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Cleaning up excess files from startup">
+      <created>1587362573145</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1587362573145</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Updating directory, converting to a Bot class, and fixing formatting">
+      <created>1587408417700</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1587408417700</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Fixing welcome message">
+      <created>1587409566899</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1587409566899</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Fixing the file structure and including server-specific bot configs">
+      <created>1587416969788</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1587416969788</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Updating welcome message and dynamodb url">
+      <created>1587502442523</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1587502442523</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Adding AdminCog with first admin command">
+      <created>1587671131686</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1587671131686</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Adding custom prefixes and a friendly name for AdminCog">
+      <created>1587672995300</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1587672995301</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Adding INFO level logging config">
+      <created>1587698089889</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1587698089889</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Updating to `WARN` logs, adding appspec file for CodeDeploy">
+      <created>1588743012400</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1588743012400</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Basic bot functionality" />
+    <MESSAGE value="Cleaning up excess files from startup" />
+    <MESSAGE value="Updating directory, converting to a Bot class, and fixing formatting" />
+    <MESSAGE value="Fixing welcome message" />
+    <MESSAGE value="Fixing the file structure and including server-specific bot configs" />
+    <MESSAGE value="Updating welcome message and dynamodb url" />
+    <MESSAGE value="Adding AdminCog with first admin command" />
+    <MESSAGE value="Adding custom prefixes and a friendly name for AdminCog" />
+    <MESSAGE value="Adding INFO level logging config" />
+    <MESSAGE value="Updating to `WARN` logs, adding appspec file for CodeDeploy" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updating to `WARN` logs, adding appspec file for CodeDeploy" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1171" y="570" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1622169226359">
+      <screen x="-2560" y="0" width="2560" height="1400" />
+    </state>
+    <state x="-1171" y="570" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.2560.1400/-2560.0.2560.1400@-2560.0.2560.1400" timestamp="1622169226359" />
+  </component>
+</project>
